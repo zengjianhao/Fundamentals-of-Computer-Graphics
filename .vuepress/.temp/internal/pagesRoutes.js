@@ -1,0 +1,15 @@
+export const pagesRoutes = [
+  ["v-8daa1a0e","/",{"y":"h","title":""},["/index.html","/README.md"]],
+  ["v-529e3579","/content.html",{"y":"a","title":"目录"},["/content","/content.md"]],
+  ["v-7e7ec962","/original.html",{"y":"a","title":"原文"},["/original","/original.md"]],
+  ["v-73b28584","/table.html",{"y":"a","title":"中英文对照索引表"},["/table","/table.md"]],
+  ["v-7a3e4ff0","/notes_en/01_Introduction.html",{"y":"a","title":"1 Introduction"},["/notes_en/01_Introduction","/notes_en/01_Introduction.md"]],
+  ["v-26b3f25c","/notes_en/02_Miscellaneous_Math.html",{"y":"a","title":"2 Miscellaneous Math"},["/notes_en/02_Miscellaneous_Math","/notes_en/02_Miscellaneous_Math.md"]],
+  ["v-92907528","/notes_en/03_Raster_Images.html",{"y":"a","title":"3 Raster Images"},["/notes_en/03_Raster_Images","/notes_en/03_Raster_Images.md"]],
+  ["v-4c40ee68","/notes/01_Introduction.html",{"y":"a","title":"1 介绍"},["/notes/01_Introduction","/notes/01_Introduction.md"]],
+  ["v-ccb4296c","/notes/02_Miscellaneous_Math.html",{"y":"a","title":"2 混杂的数学"},["/notes/02_Miscellaneous_Math","/notes/02_Miscellaneous_Math.md"]],
+  ["v-2508f5f4","/notes/03_Raster_Images.html",{"y":"a","title":"3 光栅图像"},["/notes/03_Raster_Images","/notes/03_Raster_Images.md"]],
+  ["v-3706649a","/404.html",{"y":"p","title":""},["/404"]],
+  ["v-69ac134f","/notes_en/",{"y":"p","title":"Notes En"},["/notes_en/index.html"]],
+  ["v-e8b6c472","/notes/",{"y":"p","title":"Notes"},["/notes/index.html"]],
+]
