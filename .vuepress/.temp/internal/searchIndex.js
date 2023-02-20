@@ -109,6 +109,165 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "1 介绍",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.1 图形学领域",
+        "slug": "_1-1-图形学领域",
+        "link": "#_1-1-图形学领域",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.2 主要应用",
+        "slug": "_1-2-主要应用",
+        "link": "#_1-2-主要应用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.3 图形学 API",
+        "slug": "_1-3-图形学-api",
+        "link": "#_1-3-图形学-api",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.4 图形管线",
+        "slug": "_1-4-图形管线",
+        "link": "#_1-4-图形管线",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.5 数值问题",
+        "slug": "_1-5-数值问题",
+        "link": "#_1-5-数值问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.6 效率",
+        "slug": "_1-6-效率",
+        "link": "#_1-6-效率",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.7 设计和编码图形学程序",
+        "slug": "_1-7-设计和编码图形学程序",
+        "link": "#_1-7-设计和编码图形学程序",
+        "children": [
+          {
+            "level": 3,
+            "title": "1.7.1 类设计",
+            "slug": "_1-7-1-类设计",
+            "link": "#_1-7-1-类设计",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.7.2 单精度 vs. 双精度",
+            "slug": "_1-7-2-单精度-vs-双精度",
+            "link": "#_1-7-2-单精度-vs-双精度",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.7.3 调试图形学程序",
+            "slug": "_1-7-3-调试图形学程序",
+            "link": "#_1-7-3-调试图形学程序",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Notes",
+        "slug": "notes",
+        "link": "#notes",
+        "children": []
+      }
+    ],
+    "path": "/notes/01_Introduction.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "2 混杂的数学",
+    "headers": [],
+    "path": "/notes/02_Miscellaneous_Math.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "3 光栅图像",
+    "headers": [
+      {
+        "level": 2,
+        "title": "3.1 光栅设备",
+        "slug": "_3-1-光栅设备",
+        "link": "#_3-1-光栅设备",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.1.1 显示器",
+            "slug": "_3-1-1-显示器",
+            "link": "#_3-1-1-显示器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.1.2 硬拷贝设备",
+            "slug": "_3-1-2-硬拷贝设备",
+            "link": "#_3-1-2-硬拷贝设备",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.1.3 输入设备",
+            "slug": "_3-1-3-输入设备",
+            "link": "#_3-1-3-输入设备",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.2 图像，像素和几何学",
+        "slug": "_3-2-图像-像素和几何学",
+        "link": "#_3-2-图像-像素和几何学",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.2.1 像素值",
+            "slug": "_3-2-1-像素值",
+            "link": "#_3-2-1-像素值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.2.2 显示器强度和 Gamma 值",
+            "slug": "_3-2-2-显示器强度和-gamma-值",
+            "link": "#_3-2-2-显示器强度和-gamma-值",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.3 RGB 颜色",
+        "slug": "_3-3-rgb-颜色",
+        "link": "#_3-3-rgb-颜色",
+        "children": []
+      }
+    ],
+    "path": "/notes/03_Raster_Images.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "1 Introduction",
     "headers": [
       {
@@ -313,175 +472,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "1 介绍",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.1 图形学领域",
-        "slug": "_1-1-图形学领域",
-        "link": "#_1-1-图形学领域",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.2 主要应用",
-        "slug": "_1-2-主要应用",
-        "link": "#_1-2-主要应用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.3 图形学 API",
-        "slug": "_1-3-图形学-api",
-        "link": "#_1-3-图形学-api",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.4 图形管线",
-        "slug": "_1-4-图形管线",
-        "link": "#_1-4-图形管线",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.5 数值问题",
-        "slug": "_1-5-数值问题",
-        "link": "#_1-5-数值问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.6 效率",
-        "slug": "_1-6-效率",
-        "link": "#_1-6-效率",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.7 设计和编码图形学程序",
-        "slug": "_1-7-设计和编码图形学程序",
-        "link": "#_1-7-设计和编码图形学程序",
-        "children": [
-          {
-            "level": 3,
-            "title": "1.7.1 类设计",
-            "slug": "_1-7-1-类设计",
-            "link": "#_1-7-1-类设计",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.7.2 单精度 vs. 双精度",
-            "slug": "_1-7-2-单精度-vs-双精度",
-            "link": "#_1-7-2-单精度-vs-双精度",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.7.3 调试图形学程序",
-            "slug": "_1-7-3-调试图形学程序",
-            "link": "#_1-7-3-调试图形学程序",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Notes",
-        "slug": "notes",
-        "link": "#notes",
-        "children": []
-      }
-    ],
-    "path": "/notes/01_Introduction.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "2 混杂的数学",
-    "headers": [],
-    "path": "/notes/02_Miscellaneous_Math.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "3 光栅图像",
-    "headers": [
-      {
-        "level": 2,
-        "title": "3.1 光栅设备",
-        "slug": "_3-1-光栅设备",
-        "link": "#_3-1-光栅设备",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.1.1 显示器",
-            "slug": "_3-1-1-显示器",
-            "link": "#_3-1-1-显示器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.1.2 硬拷贝设备",
-            "slug": "_3-1-2-硬拷贝设备",
-            "link": "#_3-1-2-硬拷贝设备",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.1.3 输入设备",
-            "slug": "_3-1-3-输入设备",
-            "link": "#_3-1-3-输入设备",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.2 图像，像素和几何学",
-        "slug": "_3-2-图像-像素和几何学",
-        "link": "#_3-2-图像-像素和几何学",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.2.1 像素值",
-            "slug": "_3-2-1-像素值",
-            "link": "#_3-2-1-像素值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.2.2 显示器强度和 Gamma 值",
-            "slug": "_3-2-2-显示器强度和-gamma-值",
-            "link": "#_3-2-2-显示器强度和-gamma-值",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.3 RGB 颜色",
-        "slug": "_3-3-rgb-颜色",
-        "link": "#_3-3-rgb-颜色",
-        "children": []
-      }
-    ],
-    "path": "/notes/03_Raster_Images.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "",
     "headers": [],
     "path": "/404.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Notes En",
-    "headers": [],
-    "path": "/notes_en/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -491,5 +484,25 @@ export const searchIndex = [
     "path": "/notes/",
     "pathLocale": "/",
     "extraFields": []
+  },
+  {
+    "title": "Notes En",
+    "headers": [],
+    "path": "/notes_en/",
+    "pathLocale": "/",
+    "extraFields": []
   }
 ]
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ searchIndex }) => {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  })
+}

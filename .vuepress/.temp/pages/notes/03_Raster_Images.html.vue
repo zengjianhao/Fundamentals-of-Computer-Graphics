@@ -35,12 +35,12 @@
 <p>当前的显示器，包括电视和数字电影放映机以及用于计算机的显示器和投影仪，几乎都是基于固定的像素阵列的。它们被划分为透射型显示器和发射型显示器，其中发射型显示器通过直接发射可控数量的光线使用像素，透射型显示器的像素本身不发光而是改变允许通过它们的光量。透射型显示器需要一个光源对像素进行照明：在直视显示器中，光源是像素阵列背后的背光；在投影仪中，光源是一盏发出光线的灯，光线通过像素阵列后被投影到屏幕。发射型显示器本身就是自己的光源。</p>
 <div style="text-align:center">
 <p><img src="@source/images/3_1.png" alt="">
-<strong>Figure 3.1.</strong> 发光二极管显示器的工作原理</p>
+<strong>Figure 3.1.</strong> 发光二极管显示器的工作原理。</p>
 </div>
 <p>发光二极管（LED）显示器是发射型显示器的一个例子。每个像素都由一个或多个 LED 组成，LED 是半导体设备（基于无机或有机导体），射出光线的强度取决于当前通过它们的电流（见 Figure 3.1）。</p>
 <div style="text-align:center">
 <p><img src="@source/images/3_2.png" alt="">
-<strong>Figure 3.2.</strong> 平板显示器的一个像素中包含红色，绿色和蓝色的子像素</p>
+<strong>Figure 3.2.</strong> 平板显示器的一个像素中包含红色，绿色和蓝色的子像素。</p>
 </div>
 <p>颜色显示器中的像素被氛围三个独立控制的子像素，包括一个红的，一个绿的和一个蓝的，每个子像素都有自己的 LED，这些 LED 由不同的材料制成因此它们能发出不同颜色的光（Figure 3.2）。当这个显示器从远处被观察时，眼睛无法区分出独立的子像素，并且感知的颜色是红色，绿色和蓝色的混合色。</p>
 <div style="text-align:center">
@@ -50,7 +50,7 @@
 <p>液晶显示器（LCD）是透射型显示器的一个例子。液晶是一种材料，其分子结构让它能够旋转通过它的光线的偏振（polarization），并且可以通过施加的电压来调节旋转的角度。一个 LCD 像素（Figure 3.3）背后有一层偏光膜（polarizing ﬁlm），因此它能够被偏振光（polarized light）照亮（我们假定它被水平偏振）。</p>
 <div style="text-align:center">
 <p><img src="@source/images/3_4.png" alt="">
-<strong>Figure 3.4.</strong> 液晶显示器的工作原理</p>
+<strong>Figure 3.4.</strong> 液晶显示器的工作原理。</p>
 </div>
 <p>在像素前面的第二层偏光膜被定向为只透射垂直偏振光。如果设置施加的电压使中间的液晶层不改变光线的偏振，所有的光线被阻挡并且像素处于关闭（最小强度）状态。如果设置施加的电压使液晶层90度旋转光线的偏振，接下来所有的光线都会从正面逸出，并且像素被完全启动，此时它拥有最大强度。中间电压将部分旋转光线的偏振，因此前偏振器部分阻挡光线，导致强度处于最大和最小之间（Figure 3.4）。和彩色 LED 显示器一样，彩色 LCD 的每个像素也拥有红色，绿色和蓝色的子像素，它们是三个相互独立的像素，上面覆有红色，绿色和蓝色的颜色滤波器。</p>
 <p>具有固定像素网格的任何类型的显示器，包括这些还有其他的技术，都网格大小决定的基本固定分辨率。对于显示器和图像，分辨率仅仅意味着像素网格的尺寸：如果一个桌面显示器用户拥有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1920</mn><mo>×</mo><mn>1200</mn></mrow><annotation encoding="application/x-tex">1920 \times 1200</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1920</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1200</span></span></span></span> 像素的分辨率，这意味着它有2,304,000个像素排列在 1920 列和 1200 行中。</p>
@@ -59,13 +59,13 @@
 <p>将图像永久地记录在纸上的过程和在显示器上短暂地显示图像相比拥有非常不同的约束。在打印过程中，颜料被分布在纸或其他介质上，因此当光从纸面上反射时会形成想要的图像。打印机是像显示器那样的光栅设备，但是大部分打印机只能打印二值图像。二值图像的颜料在每个网格位置沉积或者不沉积，不存在中间量。</p>
 <div style="text-align:center">
 <p><img src="@source/images/3_5.png" alt="">
-<strong>Figure 3.5.</strong> 喷墨打印机的工作原理</p>
+<strong>Figure 3.5.</strong> 喷墨打印机的工作原理。</p>
 </div>
 <p>喷墨打印机（Figure 3.5）是通过扫描形成光栅图像的设备的例子。喷墨打印机的喷头含有携带颜料的液态墨水，能够在电子控制下以非常小的液滴进行喷射。喷头在纸上移动，当它经过应该接收墨水的网格位置时，液滴会被喷出，在打算保持空白的区域中墨水不会被喷出。每次扫描之后纸张都会稍微前进，将喷头放置在网格的下一行。通过使用许多不同的喷头能实现彩色打印，每个喷头使用不同的颜料来喷出墨水，以便每个网格位置都可以收到不同颜色液滴的任何组合。因为所有的液滴都是相同的，所以喷墨打印机打印二值图像：每个网格点可能有液滴也可能没有，不存在中间阴影。</p>
 <p>喷墨打印机没有实际的像素阵列；它的分辨率取决于每次扫描后液滴的大小和纸张前进的距离。许多喷墨打印机的喷头拥有多个喷嘴，能够在单次通过时进行多次扫描，但是最终决定行间距的是纸张前进的距离，而不是喷嘴的间距。</p>
 <div style="text-align:center">
 <p><img src="@source/images/3_6.png" alt="">
-<strong>Figure 3.6.</strong> 热升华打印机的工作原理</p>
+<strong>Figure 3.6.</strong> 热升华打印机的工作原理。</p>
 </div>
 <p>热升华转换过程是连续色阶打印过程的一个例子，这意味着可以将不同数量的颜料沉积在每一个像素，这与喷墨打印机不同（Figure 3.6）。含有彩色染料的供墨纸被压在纸或其他染料接收器和喷头之间，喷头包含了加热元件的线性阵列，图像中每列像素都有一个。随着纸和供墨纸移动到头部，加热元件开启或关闭以便在需要颜料的区域加热供墨纸，从而导致染料从供墨纸扩散到纸张。对于每种染料颜色都重复这一过程。由于越高的温度会导致更多的颜料被转移，因此可以控制每个网格位置中颜料沉积的量，从而生成连续的颜色范围。喷头中的加热元件的数量在整个页面的方向上建立了固定的分辨率，但是页面上的分辨率取决于和纸张移动的速度相比加热和冷却的速率。</p>
 <p>和显示器不同，打印机的分辨率使用像素密度来描述而不是像素总数。所以一台喷头每英尺覆盖了300个元素的热升华打印机在纸张上的分辨率为每英尺300像素（ppi）。如果纸张上的分辨率都趋近于相同，我们一般可以称这台打印机的分辨率为300 ppi。一台喷墨打印机在每英尺1200个网格点的网格上放置点，这通常被描述为拥有1200每英尺点数（dpi）的分辨率。由于喷墨打印机是二值设备，至少有两个原因导致它需要更精细的网格。因为边缘是突变的黑/白边界，需要非常高的分辨率来避免阶梯状和混叠的发生（见8.3节）。当打印连续色阶图像时，需要高分辨率来模拟中间的颜色，打印密度可变的点状图案被称为半色调。</p>
@@ -73,7 +73,7 @@
 <p>光栅图像必须来自于某个地方，任何不是由某种算法计算得到的图像都必须由某种光栅输入设备（如摄影机或扫描仪）测量得到。即使是渲染 3D 场景的图像，摄影图像也会不断地被用作纹理图（见 Chapter 11）。光栅输入设备必须对每个像素进行光照测量，并且和输出设备一样，它们通常基于传感器阵列。</p>
 <div style="text-align:center">
 <p><img src="@source/images/3_7.png" alt="">
-<strong>Figure 3.7.</strong> 数码相机的工作原理</p>
+<strong>Figure 3.7.</strong> 数码相机的工作原理。</p>
 </div>
 <p>数码相机是 2D 阵列输入设备的一个例子。相机中的图像传感器是具有光敏像素网格的半导体设备。两种常见的阵列类型被称为 CCD（电荷耦合器件）和 CMOS（互补金属氧化物半导体）图像传感器。相机的镜头将要拍摄的场景图像投射到传感器，并且每个像素测量落到其上的光能，最终产生一个数字并传递给输出图像（Figure 3.7）。与彩色显示器使用红色、绿色和蓝色子像素的方式大致相同，大部分彩色相机的工作原理是使用颜色滤波器阵列或马赛克来让每个像素只能看见红色，绿色或蓝色的光，让图像处理软件来填充缺失的值，这个过程被称为去马赛克（Figure 3.8）。</p>
 <div style="text-align:center">
@@ -83,7 +83,7 @@
 <p>其他相机使用三个独立的阵列或者在阵列中使用三个独立的层，来测量每个像素独立的红色值，绿色值和蓝色值，进而无需做进一步处理就能生成可用的图像。相机的分辨率取决于阵列中固定的像素数，通常使用像素总数来引用：一台具有3000列和2000行的阵列的相机生成分辨率为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3000</mn><mo>×</mo><mn>2000</mn></mrow><annotation encoding="application/x-tex">3000 \times 2000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">3000</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2000</span></span></span></span> 的图像，图像拥有六百万像素，相机被称为六兆像素（MP）相机。重点是要记住，马赛克传感器不能测量完整的彩色图像，因此测量像素数相同但是具有独立的红色，绿色和蓝色测量值的相机比使用马赛克传感器的相机能记录更多图像信息。</p>
 <div style="text-align:center">
 <p><img src="@source/images/3_9.png" alt="">
-<strong>Figure 3.9.</strong> 平板扫描仪的工作原理</p>
+<strong>Figure 3.9.</strong> 平板扫描仪的工作原理。</p>
 </div>
 <p>平板扫描仪也同样测量网格中每个像素的红色值，绿色值和蓝色值，但是类似于热升华打印机，它使用 1D 阵列在页面上扫描，每秒进行多次测量。页面横向的分辨率由阵列的尺寸固定，页面纵向的分辨率由与扫描头移动的速度相比测量的频率决定。彩色扫描仪拥有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>×</mo><msub><mi>n</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">3 \times n_x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的阵列，其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">n_x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 是页面横向的像素数，三行被红色，绿色和蓝色滤波器覆盖。在测量三种颜色的时间之间存在适当的延迟，这允许在每个网格点进行三次独立的颜色测量。和连续色阶打印机一样，扫描仪的分辨率也使用每英寸像素（ppi）来表示。</p>
 <p>有着这些图像来自哪里和图像将去往哪里的相关信息，我们将更抽象地讨论图像，我们将在图形学算法中使用它们。</p>
@@ -157,7 +157,40 @@ a^&#x27; = a^{\frac{1}{\gamma}}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mopen">{</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">255</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05556em;">γ</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">255</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05556em;">γ</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">255</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05556em;">γ</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">255</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">254</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05556em;">γ</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">255</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">255</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05556em;">γ</span></span></span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span></span></p>
 <p>其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 是最大亮度值。在需要精确控制强度的应用中，我们实际上需要测量256种可能的强度，而这些强度在屏幕上不同点上可能不同，尤其是对于 CRT 来说。它们也可能随着视角的变化而变化。幸运的是，很少有应用程序需要如此精确的校准。</p>
 <h2 id="_3-3-rgb-颜色" tabindex="-1"><a class="header-anchor" href="#_3-3-rgb-颜色" aria-hidden="true">#</a> 3.3 RGB 颜色</h2>
-<p>大多数计算机图形图像都是用红绿蓝（RGB）颜色定义的。RGB 颜色是一个简单的空间，可以直接转换为大多数计算机屏幕的控制。本节将从用户的角度讨论RGB颜色，并以操作便捷为目标。有关颜色的更详细讨论将在第19章中进行，但是RGB颜色空间的机制将使我们能够编写大多数图形程序。RGB颜色空间的基本思想是，通过混合三种原色灯光（一种红色，一种绿色和一种蓝色）来显示颜色。这些灯光以加法方式混合。</p>
+<p>大多数计算机图形图像都是用红绿蓝（RGB）颜色定义的。RGB 颜色是一个简单的空间，可以直接转换为大多数计算机屏幕的控制。本节将从用户的角度讨论 RGB 颜色，并以操作便捷为目标。有关颜色的更详细讨论将在第19章中进行，但是 RGB 颜色空间的机制将使我们能够编写大多数图形程序。RGB 颜色空间的基本思想是，通过混合三种基色光（一种红色，一种绿色和一种蓝色）来显示颜色。这些灯光以加法方式混合。</p>
+<div style="text-align:center">
+<p><img src="@source/images/3_12.png" alt="">
+<strong>Figure 3.12.</strong> 红/绿/蓝颜色的加法混合规则。</p>
+</div>
+<p>在RGB加色混合中，我们有（Figure 3.12）</p>
+<div style="text-align:center">
+<p>red + green = yellow</p>
+<p>green + blue = cyan</p>
+<p>blue + red = magenta</p>
+<p>red + green + blue = white</p>
+</div>
+<p>颜色“青色”是蓝绿色，颜色“洋红”是紫色。</p>
+<p>如果我们可以将三种原色的亮度从完全关闭（用像素值0表示）调整到全开（用像素值1表示），我们可以创建所有可以在RGB显示器上显示的颜色。红、绿、蓝像素值创建了一个三维的 RGB 颜色立方体，它有一个红、一个绿和一个蓝轴。轴的允许坐标范围从零到一。该颜色立方体在 Figure 3.13 中以图形方式显示。</p>
+<div style="text-align:center">
+<p><img src="@source/images/3_13.png" alt="">
+<strong>Figure 3.13.</strong> 3D 中的 RGB 色彩立方体及其展开的面。任何 RGB 颜色都是立方体中的一个点。</p>
+</div>
+<p>立方体角上的颜色是</p>
+<div style="text-align:center">
+<p>黑 = (0, 0, 0)</p>
+<p>红 = (1, 0, 0)</p>
+<p>绿 = (0, 1, 0)</p>
+<p>蓝 = (0, 0, 1)</p>
+<p>黄 = (1, 1, 0)</p>
+<p>品红 = (1, 0, 1)</p>
+<p>青 = (0, 1, 1)</p>
+<p>白 = (1, 1, 1)</p>
+</div>
+<p>实际的 RGB 级别通常以量化形式给出，就像 Section 3.2.2 中讨论的灰度级别一样。每个分量都用整数指定。这些整数的最常见大小是单个字节，因此每个RGB分量都是介于0和255之间的整数。三个整数一起占用三个字节，即24位。因此，“24-bit 色彩”系统对于每个三原色都有256个可能的级别。Section 3.2.2 讨论的伽玛校正问题也适用于每个RGB分量。</p>
+<h2 id="_3-4-alpha-合成" tabindex="-1"><a class="header-anchor" href="#_3-4-alpha-合成" aria-hidden="true">#</a> 3.4 Alpha 合成</h2>
+<h3 id="_3-4-1-图像存储" tabindex="-1"><a class="header-anchor" href="#_3-4-1-图像存储" aria-hidden="true">#</a> 3.4.1 图像存储</h3>
+<h2 id="常见问题" tabindex="-1"><a class="header-anchor" href="#常见问题" aria-hidden="true">#</a> 常见问题</h2>
+<h2 id="练习" tabindex="-1"><a class="header-anchor" href="#练习" aria-hidden="true">#</a> 练习</h2>
 </div></template>
 
 

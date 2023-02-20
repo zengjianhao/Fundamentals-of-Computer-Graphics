@@ -166,9 +166,9 @@ All modern monitors take digital input for the “value” of a pixel and conver
 
 There are two key issues that must be understood to produce correct images on monitors. The ﬁrst is that monitors are nonlinear with respect to input. For example, if you give a monitor 0, 0.5, and 1.0 as inputs for three pixels, the intensities displayed might be 0, 0.25, and 1.0 (off, one-quarter fully on, and fully on). As an approximate characterization of this nonlinearity, monitors are commonly characterized by a $\gamma$ (“gamma”) value. This value is the degree of freedom in the formula
 
-::: center
-displayed intensity = (maximum intensity) $a^{\gamma}$
-:::
+$$
+displayed intensity = (maximum intensity) a^{\gamma} \tag{3.1}
+$$
 
 where $a$ is the input pixel value between zero and one. For example, if a monitor has a gamma of 2.0, and we input $a$ value of $a = 0.5$, the displayed intensity will be one fourth the maximum possible intensity because $0.5^2 = 0.25$. Note that $a = 0$ maps to zero intensity and $a = 1$ maps to the maximum intensity regardless of the value of $\gamma$. Describing a display’s nonlinearity using $\gamma$ is only an approximation; we do not need a great deal of accuracy in estimating the $\gamma$ of a device. A nice visual way to gauge the nonlinearity is to ﬁnd what value of $a$ gives an intensity halfway between black and white. This a will be
 
@@ -215,6 +215,11 @@ where $M$ is the maximum intensity. In applications where the exact intensities 
 
 Most computer graphics images are deﬁned in terms of red-green-blue (RGB) color. RGB color is a simple space that allows straightforward conversion to the controls for most computer screens. In this section, RGB color is discussed from a user’s perspective, and operational facility is the goal. A more thorough discussion of color is given in Chapter 19, but the mechanics of RGB color space will allow us to write most graphics programs. The basic idea of RGB color space is that the color is displayed by mixing three primary lights: one red, one green, and one blue. The lights mix in an additive manner.
 
+::: center
+![](../images/3_12.png)
+**Figure 3.12.** The additive mixing rules for colors red/green/blue.
+:::
+
 In RGB additive color mixing we have (Figure 3.12)
 
 ::: center
@@ -231,24 +236,52 @@ The color “cyan” is a blue-green, and the color “magenta” is a purple.
 
 If we are allowed to dim the primary lights from fully off (indicated by pixel value 0) to fully on (indicated by 1), we can create all the colors that can be displayed on an RGB monitor. The red, green, and blue pixel values create a three-dimensional RGB color cube that has a red, a green, and a blue axis. Allowable coordinates for the axes range from zero to one. The color cube is shown graphically in Figure 3.13.
 
+::: center
+![](../images/3_13.png)
+**Figure 3.13.** The RGB color cube in 3D and its faces unfolded. Any RGB color is a point in the cube.
+:::
+
 The colors at the corners of the cube are
 
 ::: center
-black = (0, 0, 0),
+black = (0, 0, 0)
 
-red = (1, 0, 0),
+red = (1, 0, 0)
 
-green = (0, 1, 0),
+green = (0, 1, 0)
 
-blue = (0, 0, 1),
+blue = (0, 0, 1)
 
-yellow = (1, 1, 0),
+yellow = (1, 1, 0)
 
-magenta = (1, 0, 1),
+magenta = (1, 0, 1)
+
+cyan = (0, 1, 1)
+
+white = (1, 1, 1)
 :::
 
 Actual RGB levels are often given in quantized form, just like the grayscales discussed in Section 3.2.2. Each component is speciﬁed with an integer. The most common size for these integers is one byte each, so each of the three RGB components is an integer between 0 and 255. The three integers together take up three bytes, which is 24 bits. Thus a system that has “24-bit color” has 256 possible levels for each of the three primary colors. Issues of gamma correction discussed in Section 3.2.2 also apply to each RGB component separately.
+
 ## 3.4 Alpha Compositing
+
+Often we would like to only partially overwrite the contents of a pixel. A common example of this occurs in compositing, where we have a background and want to insert a foreground image over it. For opaque pixels in the foreground, we just replace the background pixel. For entirely transparent foreground pixels, we do not change the background pixel. For partially transparent pixels, some care must be taken. Partially transparent pixels can occur when the foreground object has partially transparent regions, such as glass. But, the most frequent case where foreground and background must be blended is when the foreground object only partly covers the pixel, either at the edge of the foreground object, or when there are sub-pixel holes such as between the leaves of a distant tree.
+
+The most important piece of information needed to blend a foreground object over a background object is the pixel coverage, which tells the fraction of the pixel covered by the foreground layer. We can call this fraction α. If we want to composite a foreground color c f over background color c b , and the fraction of the pixel covered by the foreground is α, then we can use the formula
+
+$$
+c = \alpha c_f + (1 - \alpha) c_b \tag{3.2}
+$$
+
+For an opaque foreground layer, the interpretation is that the foreground object covers area α within the pixel’s rectangle and the background object covers the remaining area, which is (1 − α). For a transparent layer (think of an image painted on glass or on tracing paper, using translucent paint), the interpretation is that the foreground layer blocks the fraction (1 − α) of the light coming through from the background and contributes a fraction α of its own color to replace what was removed. An example of using Equation (3.2) is shown in Figure 3.14.
+
+The α values for all the pixels in an image might be stored in a separate grayscale image, which is then known as an alpha mask or transparency mask. Or the information can be stored as a fourth channel in an RGB image, in which case it is called the alpha channel, and the image can be called an RGBA image. With 8-bit images, each pixel then takes up 32 bits, which is a conveniently sized chunk in many computer architectures.
+
+Although Equation (3.2) is what is usually used, there are a variety of situations where α is used differently (Porter & Duff, 1984).
 
 ### 3.4.1 Image Storage
 
+
+## Frequently Asked Questions
+
+## Exercise

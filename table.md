@@ -58,3 +58,7 @@ sidebar: false
 - quantization 量化
 - banding 条带
 - gamma correction 伽玛矫正
+- primary light 基色光
+- additive 加法的
+- RGB color cube RGB 色彩立方体
+- 

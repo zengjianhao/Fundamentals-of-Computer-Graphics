@@ -50,6 +50,10 @@
 <li>quantization 量化</li>
 <li>banding 条带</li>
 <li>gamma correction 伽玛矫正</li>
+<li>primary light 基色光</li>
+<li>additive 加法的</li>
+<li>RGB color cube RGB 色彩立方体</li>
+<li></li>
 </ul>
 </div></template>
 
