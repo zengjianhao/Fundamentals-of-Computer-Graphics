@@ -1,6 +1,6 @@
 # Fundamentals of Computer Graphics
 
-Fundamentals of Computer Graphics 第四版中文翻译
+《Fundamentals of Computer Graphics》 虎书第四版中文翻译
 
 ## 发布网址
 
