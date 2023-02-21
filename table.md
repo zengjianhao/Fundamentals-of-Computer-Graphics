@@ -61,4 +61,11 @@ sidebar: false
 - primary light 基色光
 - additive 加法的
 - RGB color cube RGB 色彩立方体
-- 
+- composite 合成
+- partial 部分的
+- pixel coverage 像素覆盖率
+- alpha mask alpha 蒙版
+- transparency mask 透明度蒙版
+- alpha channel alpha 通道
+- lossless 无损
+- lossy 有损

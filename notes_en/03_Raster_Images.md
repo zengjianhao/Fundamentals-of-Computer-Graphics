@@ -122,7 +122,7 @@ $$
 I(x,y): R \rightarrow V
 $$
 
-where $R \subset R^2$ is a rectangular area and V is the set of possible pixel values. The simplest case is an idealized grayscale image where each point in the rectangle has just a brightness (no color), and we can say $V = R^+$ (the nonnegative reals). An idealized color image, with red, green, and blue values at each pixel, has $V = (R^+)^3$. We’ll discuss other possibilities for $V$ in the next section.
+where $R \subset R^2$ is a rectangular area and $V$ is the set of possible pixel values. The simplest case is an idealized grayscale image where each point in the rectangle has just a brightness (no color), and we can say $V = R^+$ (the nonnegative reals). An idealized color image, with red, green, and blue values at each pixel, has $V = (R^+)^3$. We’ll discuss other possibilities for $V$ in the next section.
 
 How does a raster image relate to this abstract notion of a continuous image? Looking to the concrete examples, a pixel from a camera or scanner is a measurement of the average color of the image over some small area around the pixel. A display pixel, with its red, green, and blue subpixels, is designed so that the average color of the image over the face of the pixel is controlled by the corresponding pixel value in the raster image. In both cases, the pixel value is a local average of the color of the image, and it is called a point sample of the image. In other words, when we ﬁnd the value $x$ in a pixel, it means “the value of the image in the vicinity of this grid point is $x$.” The idea of images as sampled representations of functions is explored further in Chapter 9.
 
@@ -145,7 +145,7 @@ Again, these coordinates are simply conventions, but they will be important to r
 
 So far we have described the values of pixels in terms of real numbers, representing intensity (possibly separately for red, green, and blue) at a point in the image. This suggests that images should be arrays of ﬂoating-point numbers, with either one (for grayscale, or black and white, images) or three (for RGB color images) 32-bit ﬂoating point numbers stored per pixel. This format is sometimes used, when its precision and range of values are needed, but images have a lot of pixels and memory and bandwidth for storing and transmitting images are invariably scarce. Just one ten-megapixel photograph would consume about 115 MB of RAM in this format.
 
-Less range is required for images that are meant to be displayed directly. While the range of possible light intensities is unbounded in principle, any given device has a decidedly ﬁnite maximum intensity, so in many contexts it is perfectly sufﬁcient for pixels to have a bounded range, usually taken to be [0, 1] for simplicity. For instance, the possible values in an 8-bit image are 0, 1/255, 2/255, . . . , 254/255, 1. Images stored with ﬂoating-point numbers, allowing a wide range of values, are often called high dynamic range (HDR) images to distinguish them from ﬁxed-range, or low dynamic range (LDR) images that are stored with integers. See Chapter 21 for an in-depth discussion of techniques and applications for high dynamic range images.
+Less range is required for images that are meant to be displayed directly. While the range of possible light intensities is unbounded in principle, any given device has a decidedly ﬁnite maximum intensity, so in many contexts it is perfectly sufﬁcient for pixels to have a bounded range, usually taken to be $[0, 1]$ for simplicity. For instance, the possible values in an 8-bit image are 0, 1/255, 2/255, . . . , 254/255, 1. Images stored with ﬂoating-point numbers, allowing a wide range of values, are often called high dynamic range (HDR) images to distinguish them from ﬁxed-range, or low dynamic range (LDR) images that are stored with integers. See Chapter 21 for an in-depth discussion of techniques and applications for high dynamic range images.
 
 Here are some pixel formats with typical applications:
 
@@ -189,15 +189,19 @@ We can ﬁnd this $a$ by a standard technique where we display a checkerboard pa
 **Figure 3.11.** Alternating black and white pixels viewed from a distance are halfway between black and white. The gamma of a monitor can be inferred by ﬁnding a gray value that appears to have the same intensity as the black and white pattern.
 :::
 
-Once we know $\gamma$ , we can gamma correct our input so that a value of $a = 0.5$ is displayed with intensity halfway between black and white. This is done with the transformation
+Once we know $\gamma$ , we can gamma correct our input so that $a$ value of $a = 0.5$ is displayed with intensity halfway between black and white. This is done with the transformation
+
+$$
+a^{'} = a^{\frac{1}{\gamma}}
+$$
+
+When this formula is plugged into Equation (3.1) we get
 
 ::: center
-$a^{'} = a^{\frac{1}{\gamma}}$
-
-displayed intensity = $(a^{'})^{\gamma}$ = $(a^{\frac{1}{\gamma}})^{\gamma}$ (maximum intensity) = a (maximum intensity)
+displayed intensity = $(a^{'})^{\gamma}$ = $(a^{\frac{1}{\gamma}})^{\gamma}$(maximum intensity) = $a$(maximum intensity)
 :::
 
-Another important characteristic of real displays is that they take quantized input values. So while we can manipulate intensities in the ﬂoating point range [0, 1], the detailed input to a monitor is a ﬁxed-size integer. The most common range for this integer is 0–255 which can be held in 8 bits of storage. This means that the possible values for a are not any number in [0, 1] but instead
+Another important characteristic of real displays is that they take quantized input values. So while we can manipulate intensities in the ﬂoating point range $[0, 1]$, the detailed input to a monitor is a ﬁxed-size integer. The most common range for this integer is 0–255 which can be held in 8 bits of storage. This means that the possible values for a are not any number in $[0, 1]$ but instead
 
 ::: center
 possible values for $a = \{\frac{0}{255}, \frac{1}{255}, \frac{2}{255},..., \frac{254}{255}, \frac{255}{255}\}$
@@ -267,21 +271,40 @@ Actual RGB levels are often given in quantized form, just like the grayscales di
 
 Often we would like to only partially overwrite the contents of a pixel. A common example of this occurs in compositing, where we have a background and want to insert a foreground image over it. For opaque pixels in the foreground, we just replace the background pixel. For entirely transparent foreground pixels, we do not change the background pixel. For partially transparent pixels, some care must be taken. Partially transparent pixels can occur when the foreground object has partially transparent regions, such as glass. But, the most frequent case where foreground and background must be blended is when the foreground object only partly covers the pixel, either at the edge of the foreground object, or when there are sub-pixel holes such as between the leaves of a distant tree.
 
-The most important piece of information needed to blend a foreground object over a background object is the pixel coverage, which tells the fraction of the pixel covered by the foreground layer. We can call this fraction α. If we want to composite a foreground color c f over background color c b , and the fraction of the pixel covered by the foreground is α, then we can use the formula
+The most important piece of information needed to blend a foreground object over a background object is the pixel coverage, which tells the fraction of the pixel covered by the foreground layer. We can call this fraction $\alpha$. If we want to composite a foreground color $c_f$ over background color $c_b$, and the fraction of the pixel covered by the foreground is $\alpha$, then we can use the formula
 
 $$
 c = \alpha c_f + (1 - \alpha) c_b \tag{3.2}
 $$
 
-For an opaque foreground layer, the interpretation is that the foreground object covers area α within the pixel’s rectangle and the background object covers the remaining area, which is (1 − α). For a transparent layer (think of an image painted on glass or on tracing paper, using translucent paint), the interpretation is that the foreground layer blocks the fraction (1 − α) of the light coming through from the background and contributes a fraction α of its own color to replace what was removed. An example of using Equation (3.2) is shown in Figure 3.14.
+For an opaque foreground layer, the interpretation is that the foreground object covers area $\alpha$ within the pixel’s rectangle and the background object covers the remaining area, which is $(1-\alpha)$. For a transparent layer (think of an image painted on glass or on tracing paper, using translucent paint), the interpretation is that the foreground layer blocks the fraction $(1-\alpha)$ of the light coming through from the background and contributes a fraction α of its own color to replace what was removed. An example of using Equation (3.2) is shown in Figure 3.14.
 
-The α values for all the pixels in an image might be stored in a separate grayscale image, which is then known as an alpha mask or transparency mask. Or the information can be stored as a fourth channel in an RGB image, in which case it is called the alpha channel, and the image can be called an RGBA image. With 8-bit images, each pixel then takes up 32 bits, which is a conveniently sized chunk in many computer architectures.
+::: center
+![](../images/3_14.png)
+**Figure 3.14.** An example of compositing using Equation (3.2). The foreground image is in effect cropped by the $\alpha$ channel before being put on top of the background image. The resulting composite is shown on the bottom.
+:::
 
-Although Equation (3.2) is what is usually used, there are a variety of situations where α is used differently (Porter & Duff, 1984).
+The $\alpha$ values for all the pixels in an image might be stored in a separate grayscale image, which is then known as an alpha mask or transparency mask. Or the information can be stored as a fourth channel in an RGB image, in which case it is called the alpha channel, and the image can be called an RGBA image. With 8-bit images, each pixel then takes up 32 bits, which is a conveniently sized chunk in many computer architectures.
+
+Although Equation (3.2) is what is usually used, there are a variety of situations where $\alpha$ is used differently (Porter & Duff, 1984).
 
 ### 3.4.1 Image Storage
 
+Most RGB image formats use eight bits for each of the red, green, and blue channels. This results in approximately three megabytes of raw information for a single million-pixel image. To reduce the storage requirement, most image formats allow for some kind of compression. At a high level, such compression is either lossless or lossy. No information is discarded in lossless compression, while some information is lost unrecoverably in a lossy system. Popular image storage formats include:
+
+- **jpeg.** This lossy format compresses image blocks based on thresholds in the human visual system. This format works well for natural images.
+- **tiff.** This format is most commonly used to hold binary images or losslessly compressed 8- or 16-bit RGB although many other options exist.
+- **ppm.** This very simple lossless, uncompressed format is most often used for 8-bit RGB images although many options exist.
+- **png.** This is a set of lossless formats with a good set of open source management tools.
+
+Because of compression and variants, writing input/output routines for images can be involved. Fortunately one can usually rely on library routines to read and write standard ﬁle formats. For quick-and-dirty applications, where simplicity is valued above efﬁciency, a simple choice is to use raw ppm ﬁles, which can often be written simply by dumping the array that stores the image in memory to a ﬁle, prepending the appropriate header.
 
 ## Frequently Asked Questions
 
+- Why don’t they just make monitors linear and avoid all this gamma business?
+
+Ideally the 256 possible intensities of a monitor should look evenly spaced as opposed to being linearly spaced in energy. Because human perception of intensity is itself nonlinear, a gamma between 1.5 and 3 (depending on viewing conditions) will make the intensities approximately uniform in a subjective sense. In this way, gamma is a feature. Otherwise the manufacturers would make the monitors linear.
+
 ## Exercise
+
+1. Simulate an image acquired from the Bayer mosaic by taking a natural image (preferably a scanned photo rather than a digital photo where the Bayer mosaic may already have been applied) and creating a grayscale image composed of interleaved red/green/blue channels. This simulates the raw output of a digital camera. Now create a true RGB image from that output and compare with the original.
