@@ -70,11 +70,24 @@ You may have learned about the artistic conventions of three-point perspective, 
 
 From the previous section, the basic tools of ray generation are the viewpoint (or view direction, for parallel views) and the image plane. There are many ways to work out the details of camera geometry; in this section we explain one based on orthonormal bases that supports normal and oblique parallel and orthographic views.
 
+::: center
+![](../images/4_6.png)
+**Figure 4.6.** The ray from the eye to a point on the image plane.
+:::
+
 In order to generate rays, we ﬁrst need a mathematical representation for a ray. A ray is really just an origin point and a propagation direction; a 3D parametric line is ideal for this. As discussed in Section 2.5.7, the 3D parametric line from the eye e to a point s on the image plane (Figure 4.6) is given by
 
 $$
 p(t) = e +t(s-e)
 $$
+
+This should be interpreted as, “we advance from $e$ along the vector $(s-e)$ a fractional distance $t$ to ﬁnd the point $p$.” So given $t$, we can determine a point $p$. The point $e$ is the ray’s origin, and $(s-e)$ is the ray’s direction.
+
+Note that $p(0) = e$, and $p(1) = s$, and more generally, if $0 < t_1 < t_2$, then $p(t_1)$ is closer to the eye than $p(t_2)$. Also, if $t < 0$, then $p(t)$ is “behind” the eye. These facts will be useful when we search for the closest object hit by the ray that is not behind the eye.
+
+To compute a viewing ray, we need to know $e$ (which is given) and $s$. Finding s may seem difﬁcult, but it is actually straightforward if we look at the problem in the right coordinate system.
+
+All of our ray-generation methods start from an orthonormal coordinate frame known as the camera frame, which we’ll denote by e, for the eye point, or viewpoint, and u, v, and w for the three basis vectors, organized with u pointing rightward (from the camera’s view), v pointing upward, and w pointing backward, so that { u, v, w } forms a right-handed coordinate system. The most common way to construct the camera frame is from the viewpoint, which becomes e, the view direction, which is −w, and the up vector, which is used to construct a basis that has v and w in the plane deﬁned by the view direction and the up direction, using the process for constructing an orthonormal basis from two vectors described in Section 2.4.7.
 
 ## 4.4 Ray-Object Intersection
 

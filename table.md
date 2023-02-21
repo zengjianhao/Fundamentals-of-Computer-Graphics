@@ -72,10 +72,12 @@ sidebar: false
 
 ## 4 Ray Tracing
 
+- view 视图
+- viewpoint 视点
 - render 渲染
-- object-order rendering 物体顺序渲染
-- image-order rendering 对象顺序渲染
-- viewing ray 视角光线
+- object-order rendering 对象顺序渲染
+- image-order rendering 图片顺序渲染
+- viewing ray 视图光线
 - shading 着色
 - ray generation 光线生成
 - ray intersection 光线相交
@@ -85,3 +87,4 @@ sidebar: false
 - projection direction 投影方向
 - orthographic 正交投影
 - oblique 斜投影
+- perspective projection 透视投影
