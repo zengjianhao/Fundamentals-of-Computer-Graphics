@@ -10,11 +10,11 @@ https://zengjianhao.github.io/Fundamentals-of-Computer-Graphics/
 
 - [x] Chapter 1: Introcution
 
-Chapter 2: Miscellaneous Math
+- [ ] Chapter 2: Miscellaneous Math
 
 - [x]Chapter 3: Raster Images
 
-:sunny: Chapter 4: Ray Tracing
+Chapter 4: Ray Tracing
 
 Chapter 5: Linear Algebra
 
