@@ -74,5 +74,14 @@ sidebar: false
 
 - render 渲染
 - object-order rendering 物体顺序渲染
-- imageorder rendering 图像顺序渲染
-- 
+- image-order rendering 对象顺序渲染
+- viewing ray 视角光线
+- shading 着色
+- ray generation 光线生成
+- ray intersection 光线相交
+- linear perspective 线性透视
+- image plane 图像平面
+- parallel projection 平行投影
+- projection direction 投影方向
+- orthographic 正交投影
+- oblique 斜投影
