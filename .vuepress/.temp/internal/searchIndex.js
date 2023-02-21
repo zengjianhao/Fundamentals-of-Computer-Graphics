@@ -37,6 +37,13 @@ export const searchIndex = [
         "slug": "chapter-3-光栅图像",
         "link": "#chapter-3-光栅图像",
         "children": []
+      },
+      {
+        "level": 2,
+        "title": "Chapter 4：光线追踪",
+        "slug": "chapter-4-光线追踪",
+        "link": "#chapter-4-光线追踪",
+        "children": []
       }
     ],
     "path": "/content.html",
@@ -101,6 +108,13 @@ export const searchIndex = [
         "title": "3 Raster Images",
         "slug": "_3-raster-images",
         "link": "#_3-raster-images",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4 Ray Tracing",
+        "slug": "_4-ray-tracing",
+        "link": "#_4-ray-tracing",
         "children": []
       }
     ],
@@ -261,9 +275,45 @@ export const searchIndex = [
         "slug": "_3-3-rgb-颜色",
         "link": "#_3-3-rgb-颜色",
         "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.4 Alpha 合成",
+        "slug": "_3-4-alpha-合成",
+        "link": "#_3-4-alpha-合成",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.4.1 图像存储",
+            "slug": "_3-4-1-图像存储",
+            "link": "#_3-4-1-图像存储",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "常见问题",
+        "slug": "常见问题",
+        "link": "#常见问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "练习",
+        "slug": "练习",
+        "link": "#练习",
+        "children": []
       }
     ],
     "path": "/notes/03_Raster_Images.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "4 光线追踪",
+    "headers": [],
+    "path": "/notes/04_Ray_Tracing.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -465,9 +515,30 @@ export const searchIndex = [
             "children": []
           }
         ]
+      },
+      {
+        "level": 2,
+        "title": "Frequently Asked Questions",
+        "slug": "frequently-asked-questions",
+        "link": "#frequently-asked-questions",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Exercise",
+        "slug": "exercise",
+        "link": "#exercise",
+        "children": []
       }
     ],
     "path": "/notes_en/03_Raster_Images.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Ray Tracing",
+    "headers": [],
+    "path": "/notes_en/04_Ray_Tracing.html",
     "pathLocale": "/",
     "extraFields": []
   },

@@ -36,12 +36,14 @@ export default defineUserConfig({
             "/notes/": [
                 "/notes/01_Introduction.md",
                 "/notes/02_Miscellaneous_Math.md",
-                "/notes/03_Raster_Images.md"
+                "/notes/03_Raster_Images.md",
+                "/notes/04_Ray_Tracing.md"
             ],
             "/notes_en": [
                 "/notes_en/01_Introduction.md",
                 "/notes_en/02_Miscellaneous_Math.md",
-                "/notes_en/03_Raster_Images.md"
+                "/notes_en/03_Raster_Images.md",
+                "/notes_en/04_Ray_Tracing.md"
             ]
         },
         // 路径导航

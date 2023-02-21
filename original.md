@@ -31,7 +31,17 @@ sidebar: false
 - 3.3 RGB Color
 - 3.4 Alpha Compositing
 
-## Chapter 4: Ray Tracing
+## [Chapter 4: Ray Tracing](/notes_en/04_Ray_Tracing.md)
+
+- 4.1 The Basic Ray-Tracing Algorithm
+- 4.2 Perspective
+- 4.3 Computing Viewing Rays
+- 4.4 Ray-Object Intersection
+- 4.5 Shading
+- 4.6 A Ray-Tracing Program
+- 4.7 Shadows
+- 4.8 Ideal Specular Reﬂection
+- 4.9 Historical Notes
 
 Chapter 5: Linear Algebra
 

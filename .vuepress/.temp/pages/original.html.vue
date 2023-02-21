@@ -26,7 +26,18 @@
 <li>3.3 RGB Color</li>
 <li>3.4 Alpha Compositing</li>
 </ul>
-<h2 id="chapter-4-ray-tracing" tabindex="-1"><a class="header-anchor" href="#chapter-4-ray-tracing" aria-hidden="true">#</a> Chapter 4: Ray Tracing</h2>
+<h2 id="chapter-4-ray-tracing" tabindex="-1"><a class="header-anchor" href="#chapter-4-ray-tracing" aria-hidden="true">#</a> <RouterLink to="/notes_en/04_Ray_Tracing.html">Chapter 4: Ray Tracing</RouterLink></h2>
+<ul>
+<li>4.1 The Basic Ray-Tracing Algorithm</li>
+<li>4.2 Perspective</li>
+<li>4.3 Computing Viewing Rays</li>
+<li>4.4 Ray-Object Intersection</li>
+<li>4.5 Shading</li>
+<li>4.6 A Ray-Tracing Program</li>
+<li>4.7 Shadows</li>
+<li>4.8 Ideal Specular Reﬂection</li>
+<li>4.9 Historical Notes</li>
+</ul>
 <p>Chapter 5: Linear Algebra</p>
 <p>Chapter 6: Transformation Matrices</p>
 <p>Chapter 7: Viewing</p>

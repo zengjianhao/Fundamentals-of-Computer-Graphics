@@ -53,6 +53,20 @@
 <li>primary light 基色光</li>
 <li>additive 加法的</li>
 <li>RGB color cube RGB 色彩立方体</li>
+<li>composite 合成</li>
+<li>partial 部分的</li>
+<li>pixel coverage 像素覆盖率</li>
+<li>alpha mask alpha 蒙版</li>
+<li>transparency mask 透明度蒙版</li>
+<li>alpha channel alpha 通道</li>
+<li>lossless 无损</li>
+<li>lossy 有损</li>
+</ul>
+<h2 id="_4-ray-tracing" tabindex="-1"><a class="header-anchor" href="#_4-ray-tracing" aria-hidden="true">#</a> 4 Ray Tracing</h2>
+<ul>
+<li>render 渲染</li>
+<li>object-order rendering 物体顺序渲染</li>
+<li>imageorder rendering 图像顺序渲染</li>
 <li></li>
 </ul>
 </div></template>

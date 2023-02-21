@@ -69,3 +69,10 @@ sidebar: false
 - alpha channel alpha 通道
 - lossless 无损
 - lossy 有损
+
+## 4 Ray Tracing
+
+- render 渲染
+- object-order rendering 物体顺序渲染
+- imageorder rendering 图像顺序渲染
+- 
