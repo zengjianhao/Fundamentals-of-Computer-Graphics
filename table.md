@@ -88,3 +88,7 @@ sidebar: false
 - orthographic 正交投影
 - oblique 斜投影
 - perspective projection 透视投影
+- camera frame 相机坐标系
+- view direction 视线方向
+- up vector 上向量
+- 
