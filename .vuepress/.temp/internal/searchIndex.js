@@ -312,7 +312,86 @@ export const searchIndex = [
   },
   {
     "title": "4 光线追踪",
-    "headers": [],
+    "headers": [
+      {
+        "level": 2,
+        "title": "4.1 基本的光线追踪算法",
+        "slug": "_4-1-基本的光线追踪算法",
+        "link": "#_4-1-基本的光线追踪算法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.2 透视",
+        "slug": "_4-2-透视",
+        "link": "#_4-2-透视",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.3 计算视图光线",
+        "slug": "_4-3-计算视图光线",
+        "link": "#_4-3-计算视图光线",
+        "children": [
+          {
+            "level": 3,
+            "title": "4.3.1 正交视图",
+            "slug": "_4-3-1-正交视图",
+            "link": "#_4-3-1-正交视图",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.3.2 透视视图",
+            "slug": "_4-3-2-透视视图",
+            "link": "#_4-3-2-透视视图",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4.4 光线与物体相交",
+        "slug": "_4-4-光线与物体相交",
+        "link": "#_4-4-光线与物体相交",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.5 着色",
+        "slug": "_4-5-着色",
+        "link": "#_4-5-着色",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.6 光线追踪程序",
+        "slug": "_4-6-光线追踪程序",
+        "link": "#_4-6-光线追踪程序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.7 阴影",
+        "slug": "_4-7-阴影",
+        "link": "#_4-7-阴影",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.8 理想的镜面反射",
+        "slug": "_4-8-理想的镜面反射",
+        "link": "#_4-8-理想的镜面反射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.9 历史记录",
+        "slug": "_4-9-历史记录",
+        "link": "#_4-9-历史记录",
+        "children": []
+      }
+    ],
     "path": "/notes/04_Ray_Tracing.html",
     "pathLocale": "/",
     "extraFields": []
@@ -536,8 +615,101 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Ray Tracing",
-    "headers": [],
+    "title": "4 Ray Tracing",
+    "headers": [
+      {
+        "level": 2,
+        "title": "4.1 The Basic Ray-Tracing Algorithm",
+        "slug": "_4-1-the-basic-ray-tracing-algorithm",
+        "link": "#_4-1-the-basic-ray-tracing-algorithm",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.2 Perspective",
+        "slug": "_4-2-perspective",
+        "link": "#_4-2-perspective",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.3 Computing Viewing Rays",
+        "slug": "_4-3-computing-viewing-rays",
+        "link": "#_4-3-computing-viewing-rays",
+        "children": [
+          {
+            "level": 3,
+            "title": "4.3.1 Orthographic Views",
+            "slug": "_4-3-1-orthographic-views",
+            "link": "#_4-3-1-orthographic-views",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.3.2 Perspective Views",
+            "slug": "_4-3-2-perspective-views",
+            "link": "#_4-3-2-perspective-views",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4.4 Ray-Object Intersection",
+        "slug": "_4-4-ray-object-intersection",
+        "link": "#_4-4-ray-object-intersection",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.5 Shading",
+        "slug": "_4-5-shading",
+        "link": "#_4-5-shading",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.6 A Ray-Tracing Program",
+        "slug": "_4-6-a-ray-tracing-program",
+        "link": "#_4-6-a-ray-tracing-program",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.7 Shadows",
+        "slug": "_4-7-shadows",
+        "link": "#_4-7-shadows",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.8 Ideal Specular Reﬂection",
+        "slug": "_4-8-ideal-specular-reflection",
+        "link": "#_4-8-ideal-specular-reflection",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.9 Historical Notes",
+        "slug": "_4-9-historical-notes",
+        "link": "#_4-9-historical-notes",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Frequently Asked Questions",
+        "slug": "frequently-asked-questions",
+        "link": "#frequently-asked-questions",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Exercises",
+        "slug": "exercises",
+        "link": "#exercises",
+        "children": []
+      }
+    ],
     "path": "/notes_en/04_Ray_Tracing.html",
     "pathLocale": "/",
     "extraFields": []

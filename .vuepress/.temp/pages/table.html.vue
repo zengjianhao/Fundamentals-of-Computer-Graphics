@@ -64,9 +64,25 @@
 </ul>
 <h2 id="_4-ray-tracing" tabindex="-1"><a class="header-anchor" href="#_4-ray-tracing" aria-hidden="true">#</a> 4 Ray Tracing</h2>
 <ul>
+<li>view 视图</li>
+<li>viewpoint 视点</li>
 <li>render 渲染</li>
-<li>object-order rendering 物体顺序渲染</li>
-<li>imageorder rendering 图像顺序渲染</li>
+<li>object-order rendering 对象顺序渲染</li>
+<li>image-order rendering 图片顺序渲染</li>
+<li>viewing ray 视图光线</li>
+<li>shading 着色</li>
+<li>ray generation 光线生成</li>
+<li>ray intersection 光线相交</li>
+<li>linear perspective 线性透视</li>
+<li>image plane 图像平面</li>
+<li>parallel projection 平行投影</li>
+<li>projection direction 投影方向</li>
+<li>orthographic 正交投影</li>
+<li>oblique 斜投影</li>
+<li>perspective projection 透视投影</li>
+<li>camera frame 相机坐标系</li>
+<li>view direction 视线方向</li>
+<li>up vector 上向量</li>
 <li></li>
 </ul>
 </div></template>

@@ -87,7 +87,32 @@ Note that $p(0) = e$, and $p(1) = s$, and more generally, if $0 < t_1 < t_2$, th
 
 To compute a viewing ray, we need to know $e$ (which is given) and $s$. Finding s may seem difﬁcult, but it is actually straightforward if we look at the problem in the right coordinate system.
 
-All of our ray-generation methods start from an orthonormal coordinate frame known as the camera frame, which we’ll denote by e, for the eye point, or viewpoint, and u, v, and w for the three basis vectors, organized with u pointing rightward (from the camera’s view), v pointing upward, and w pointing backward, so that { u, v, w } forms a right-handed coordinate system. The most common way to construct the camera frame is from the viewpoint, which becomes e, the view direction, which is −w, and the up vector, which is used to construct a basis that has v and w in the plane deﬁned by the view direction and the up direction, using the process for constructing an orthonormal basis from two vectors described in Section 2.4.7.
+::: center
+![](../images/4_7.png)
+**Figure 4.7.** The sample points on the screen are mapped to a similar array on the 3D window. A viewing ray is sent to each of these locations.
+:::
+
+All of our ray-generation methods start from an orthonormal coordinate frame known as the camera frame, which we’ll denote by $e$, for the eye point, or viewpoint, and $u$, $v$, and $w$ for the three basis vectors, organized with $u$ pointing rightward (from the camera’s view), $v$ pointing upward, and $w$ pointing backward, so that ${ u, v, w }$ forms a right-handed coordinate system. The most common way to construct the camera frame is from the viewpoint, which becomes $e$, the view direction, which is $−w$, and the up vector, which is used to construct a basis that has $v$ and $w$ in the plane deﬁned by the view direction and the up direction, using the process for constructing an orthonormal basis from two vectors described in Section 2.4.7.
+
+::: center
+![](../images/4_8.png)
+**Figure 4.8.** The vectors of the camera frame, together with the view direction and up direction. The $w$ vector is opposite the view direction, and the $v$ vector is coplanar with $w$ and the up vector.
+:::
+
+### 4.3.1 Orthographic Views
+
+For an orthographic view, all the rays will have the direction $−w$. Even though a parallel view doesn’t have a viewpoint per se, we can still use the origin of the camera frame to deﬁne the plane where the rays start, so that it’s possible for objects to be behind the camera.
+
+The viewing rays should start on the plane deﬁned by the point $e$ and the vectors $u$ and $v$; the only remaining information required is where on the plane the image is supposed to be. We’ll deﬁne the image dimensions with four numbers, for the four sides of the image: $l$ and $r$ are the positions of the left and right edges of the image, as measured from $e$ along the $u$ direction; and $b$ and $t$ are the positions of the bottom and top edges of the image, as measured from $e$ along the $v$ direction. Usually $l < 0 < r$ and $b < 0 < t$. (See Figure 4.9.)
+
+In Section 3.2 we discussed pixel coordinates in an image. To ﬁt an image with $n_x \times n_y$ pixels into a rectangle of size $(r−l) \times (t−b)$, the pixels are spaced a distance $(r−l)/n_x$ apart horizontally and $(t−b)/n_y$ apart vertically, with a half-pixel space around the edge to center the pixel grid within the image rectangle. This means that the pixel at position $(i, j)$ in the raster image has the position
+
+$$
+u = l + (r-l)(i+0.5)/n_x \\
+v = b + (t-b)(j+0.5)/n_y \tag{4.1}
+$$
+
+### 4.3.2 Perspective Views
 
 ## 4.4 Ray-Object Intersection
 

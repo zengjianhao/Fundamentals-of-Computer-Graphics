@@ -1,13 +1,13 @@
 import { defineClientConfig } from "@vuepress/client";
-import { hasGlobalComponent } from "/Users/maelstorm/Documents/code/blog_tiger/node_modules/vuepress-plugin-components/lib/client/shared.js";
+import { hasGlobalComponent } from "/Users/Maelstorm/Documents/code/blog_tiger/node_modules/vuepress-plugin-components/lib/client/shared.js";
 import { h } from "vue";
 
-import Badge from "/Users/maelstorm/Documents/code/blog_tiger/node_modules/vuepress-plugin-components/lib/client/components/Badge.js";
-import FontIcon from "/Users/maelstorm/Documents/code/blog_tiger/node_modules/vuepress-plugin-components/lib/client/components/FontIcon.js";
-import BackToTop from "/Users/maelstorm/Documents/code/blog_tiger/node_modules/vuepress-plugin-components/lib/client/components/BackToTop.js";
+import Badge from "/Users/Maelstorm/Documents/code/blog_tiger/node_modules/vuepress-plugin-components/lib/client/components/Badge.js";
+import FontIcon from "/Users/Maelstorm/Documents/code/blog_tiger/node_modules/vuepress-plugin-components/lib/client/components/FontIcon.js";
+import BackToTop from "/Users/Maelstorm/Documents/code/blog_tiger/node_modules/vuepress-plugin-components/lib/client/components/BackToTop.js";
 
 
-import "/Users/maelstorm/Documents/code/blog_tiger/node_modules/vuepress-plugin-components/lib/client/styles/sr-only.scss";
+import "/Users/Maelstorm/Documents/code/blog_tiger/node_modules/vuepress-plugin-components/lib/client/styles/sr-only.scss";
 
 export default defineClientConfig({
   enhance: ({ app }) => {
