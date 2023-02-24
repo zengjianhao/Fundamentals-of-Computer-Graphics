@@ -14,6 +14,7 @@ A ray tracer works by computing one pixel at a time, and for each pixel the basi
 
 ::: center
 ![](../images/4_1.png)
+
 **Figure 4.1.** The ray is “traced” into the scene and the ﬁrst object hit is the one seen through the pixel. In this case, the triangle $T_2$ is returned.
 :::
 
@@ -25,12 +26,12 @@ A basic ray tracer therefore has three parts:
 
 The structure of the basic ray tracing program is:
 
-```
+:::
 for each pixel do
     compute viewing ray
     ﬁnd ﬁrst object hit by ray and its surface normal n
     set pixel color to value computed from hit point, light, and n
-```
+:::
 
 This chapter covers basic methods for ray generation, ray intersection, and shading, that are sufﬁcient for implementing a simple demonstration ray tracer. For a really useful system, more efﬁcient ray intersection techniques from Chapter 12 need to be added, and the real potential of a ray tracer will be seen with the more advanced shading methods from Chapter 10 and the additional rendering techniques from Chapter 13.
 
@@ -40,6 +41,7 @@ The problem of representing a 3D object or scene with a 2D drawing or painting w
 
 ::: center
 ![](../images/4_2.png)
+
 **Figure 4.2.** An image taken with a ﬁsheye lens is not a linear perspective image. Photo courtesy Philip Greenspun.
 :::
 
@@ -47,6 +49,7 @@ The simplest type of projection is parallel projection, in which 3D points are m
 
 ::: center
 ![](../images/4_3.png)
+
 **Figure 4.3.** When projection lines are parallel and perpendicular to the image plane, the resulting views are called orthographic.
 :::
 
@@ -54,6 +57,7 @@ Parallel projections are often used for mechanical and architectural drawings be
 
 ::: center
 ![](../images/4_4.png)
+
 **Figure 4.4.** A parallel projection that has the image plane at an angle to the projection direction is called oblique (right). In perspective projection, the projection lines all pass through the viewpoint, rather than being parallel (left). The illustrated perspective view is non-oblique because a projection line drawn through the center of the image would be perpendicular to the image plane.
 :::
 
@@ -61,6 +65,7 @@ The advantages of parallel projection are also its limitations. In our everyday 
 
 ::: center
 ![](../images/4_5.png)
+
 **Figure 4.5.** In three-point perspective, an artist picks “vanishing points” where parallel lines meet. Parallel horizontal lines will meet at a point on the horizon. Every set of parallel lines has its own vanishing points. These rules are followed automatically if we implement perspective based on the correct geometric principles.
 :::
 
@@ -72,14 +77,15 @@ From the previous section, the basic tools of ray generation are the viewpoint (
 
 ::: center
 ![](../images/4_6.png)
+
 **Figure 4.6.** The ray from the eye to a point on the image plane.
 :::
 
 In order to generate rays, we ﬁrst need a mathematical representation for a ray. A ray is really just an origin point and a propagation direction; a 3D parametric line is ideal for this. As discussed in Section 2.5.7, the 3D parametric line from the eye e to a point s on the image plane (Figure 4.6) is given by
 
-$$
+::: center
 p(t) = e +t(s-e)
-$$
+:::
 
 This should be interpreted as, “we advance from $e$ along the vector $(s-e)$ a fractional distance $t$ to ﬁnd the point $p$.” So given $t$, we can determine a point $p$. The point $e$ is the ray’s origin, and $(s-e)$ is the ray’s direction.
 
@@ -89,6 +95,7 @@ To compute a viewing ray, we need to know $e$ (which is given) and $s$. Finding 
 
 ::: center
 ![](../images/4_7.png)
+
 **Figure 4.7.** The sample points on the screen are mapped to a similar array on the 3D window. A viewing ray is sent to each of these locations.
 :::
 
@@ -96,6 +103,7 @@ All of our ray-generation methods start from an orthonormal coordinate frame kno
 
 ::: center
 ![](../images/4_8.png)
+
 **Figure 4.8.** The vectors of the camera frame, together with the view direction and up direction. The $w$ vector is opposite the view direction, and the $v$ vector is coplanar with $w$ and the up vector.
 :::
 
@@ -112,9 +120,49 @@ u = l + (r-l)(i+0.5)/n_x \\
 v = b + (t-b)(j+0.5)/n_y \tag{4.1}
 $$
 
+where $(u, v)$ are the coordinates of the pixel’s position on the image plane, measured with respect to the origin e and the basis ${ u, v }$.
+
+In an orthographic view, we can simply use the pixel’s image-plane position as the ray’s starting point, and we already know the ray’s direction is the view direction. The procedure for generating orthographic viewing rays is then:
+
+:::center
+compute $u$ and $v$ using (4.1)
+ray.direction $\leftarrow$ $−w$
+ray.origin $\leftarrow$ $e + u u + v v$
+:::
+
+It’s very simple to make an oblique parallel view: just allow the image plane normal $w$ to be speciﬁed separately from the view direction $d$. The procedure is then exactly the same, but with $d$ substituted for $−w$. Of course $w$ is still used to construct $u$ and $v$.
+
 ### 4.3.2 Perspective Views
 
+For a perspective view, all the rays have the same origin, at the viewpoint; it is the directions that are different for each pixel. The image plane is no longer positioned at $e$, but rather some distance $d$ in front of $e$; this distance is the image plane distance, often loosely called the focal length, because choosing $d$ plays the same role as choosing focal length in a real camera. The direction of each ray is deﬁned by the viewpoint and the position of the pixel on the image plane. This situation is illustrated in Figure 4.9, and the resulting procedure is similar to the orthographic one:
+
+::: center
+compute $u$ and $v$ using (4.1)
+ray.direction $\leftarrow$ $−d w + u u + v v$
+ray.origin $\leftarrow e$
+:::
+
+As with parallel projection, oblique perspective views can be achieved by specifying the image plane normal separately from the projection direction, then replacing $−d$ w with dd in the expression for the ray direction.
+
 ## 4.4 Ray-Object Intersection
+
+Once we’ve generated a ray $e+td$, we next need to ﬁnd the ﬁrst intersection with any object where $t > 0$. In practice, it turns out to be useful to solve a slightly more general problem: ﬁnd the ﬁrst intersection between the ray and a surface that occurs at a $t$ in the interval $[t_0 , t_1]$. The basic ray intersection is the case where $t_0 = 0$ and $t_1 = +\infty$. We solve this problem for both spheres and triangles. In the next section, multiple objects are discussed.
+
+Given a ray $p(t) = e + td$ and an implicit surface $f(p) = 0$ (see Section 2.5.3), we’d like to know where they intersect. Intersection points occur when points on the ray satisfy the implicit equation, so the values of $t$ we seek are those that solve the equation
+
+::: center
+$f(p(t)) = 0$ or $f(e + td) = 0$
+:::
+
+A sphere with center $c = (x_c, y_c, z_c)$ and radius $R$ can be represented by the implicit equation
+
+We can write this same equation in vector form:
+
+::: center
+(p − c) · (p − c) − R 2 = 0.
+:::
+
+### 4.4.1 Ray-Sphere Intersection
 
 ## 4.5 Shading
 
@@ -124,8 +172,40 @@ $$
 
 ## 4.8 Ideal Specular Reﬂection
 
+It is straightforward to add ideal specular reﬂection, or mirror reﬂection, to a raytracing program. The key observation is shown in Figure 4.19 where a viewer looking from direction $e$ sees what is in direction $r$ as seen from the surface. The vector $r$ is found using a variant of the Phong lighting reﬂection Equation (10.6). There are sign changes because the vector $d$ points toward the surface in this case, so,
+
+$$
+r = d − 2(d · n)n \tag{4.5}
+$$
+
+In the real world, some energy is lost when the light reﬂects from the surface, and this loss can be different for different colors. For example, gold reﬂects yellow more efﬁciently than blue, so it shifts the colors of the objects it reﬂects. This can be implemented by adding a recursive call in raycolor:
+
+::: center
+color $c$ = $c + k_m$ raycolor($p + sr$, $\in$, $\infty$)
+:::
+
 ## 4.9 Historical Notes
+
+Ray tracing was developed early in the history of computer graphics (Appel, 1968) but was not used much until sufﬁcient compute power was available (Kay & Greenberg, 1979; Whitted, 1980).
+
+Ray tracing has a lower asymptotic time complexity than basic object-order rendering (Snyder & Barr, 1987; Muuss, 1995; S. Parker et al., 1999; Wald, Slusallek, Benthin, & Wagner, 2001). Although it was traditionally thought of as an ofﬂine method, real-time ray tracing implementations are becoming more and more common.
 
 ## Frequently Asked Questions
 
+- Why is there no perspective matrix in ray tracing?
+
+The perspective matrix in a z-buffer exists so that we can turn the perspective projection into a parallel projection. This is not needed in ray tracing, because it is easy to do the perspective projection implicitly by fanning the rays out from the eye.
+
+- Can ray tracing be made interactive?
+
+For sufﬁciently small models and images, any modern PC is sufﬁciently powerful for ray tracing to be interactive. In practice, multiple CPUs with a shared frame buffer are required for a full-screen implementation. Computer power is increasing much faster than screen resolution, and it is just a matter of time before conventional PCs can ray trace complex scenes at screen resolution.
+
+- Is ray tracing useful in a hardware graphics program?
+
+Ray tracing is frequently used for picking. When the user clicks the mouse on a pixel in a 3D graphics program, the program needs to determine which object is visible within that pixel. Ray tracing is an ideal way to determine that.
+
 ## Exercises
+
+1. What are the ray parameters of the intersection points between ray $(1, 1, 1) + t(−1, −1, −1)$ and the sphere centered at the origin with radius 1? Note: this is a good debugging case.
+2. What are the barycentric coordinates and ray parameter where the ray $(1, 1, 1) + t(−1, −1, −1)$ hits the triangle with vertices $(1, 0, 0)$, $(0, 1, 0)$, and $(0, 0, 1)$? Note: this is a good debugging case.
+3. Do a back of the envelope computation of the approximate time complexity of ray tracing on “nice” (non-adversarial) models. Split your analysis into the cases of preprocessing and computing the image, so that you can predict the behavior of ray tracing multiple frames for a static model.

@@ -33,6 +33,7 @@ Current displays, including televisions and digital cinematic projectors as well
 
 ::: center
 ![](../images/3_1.png)
+
 **Figure 3.1.** The operation of a light-emitting diode (LED) display.
 :::
 

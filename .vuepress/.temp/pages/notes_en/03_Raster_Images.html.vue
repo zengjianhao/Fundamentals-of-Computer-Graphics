@@ -34,8 +34,8 @@
 <h3 id="_3-1-1-displays" tabindex="-1"><a class="header-anchor" href="#_3-1-1-displays" aria-hidden="true">#</a> 3.1.1 Displays</h3>
 <p>Current displays, including televisions and digital cinematic projectors as well as displays and projectors for computers, are nearly universally based on ﬁxed arrays of pixels. They can be separated into emissive displays, which use pixels that directly emit controllable amounts of light, and transmissive displays, in which the pixels themselves don’t emit light but instead vary the amount of light that they allow to pass through them. Transmissive displays require a light source to illuminate them: in a direct-viewed display this is a backlight behind the array; in a projector it is a lamp that emits light that is projected onto the screen after passing through the array. An emissive display is its own light source.</p>
 <div style="text-align:center">
-<p><img src="@source/images/3_1.png" alt="">
-<strong>Figure 3.1.</strong> The operation of a light-emitting diode (LED) display.</p>
+<p><img src="@source/images/3_1.png" alt=""></p>
+<p><strong>Figure 3.1.</strong> The operation of a light-emitting diode (LED) display.</p>
 </div>
 <p>Light-emitting diode (LED) displays are an example of the emissive type. Each pixel is composed of one or more LEDs, which are semiconductor devices (based on inorganic or organic semiconductors) that emit light with intensity depending on the electrical current passing through them (see Figure 3.1).</p>
 <div style="text-align:center">

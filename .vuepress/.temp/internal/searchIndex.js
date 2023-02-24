@@ -513,6 +513,49 @@ export const searchIndex = [
             "children": []
           }
         ]
+      },
+      {
+        "level": 2,
+        "title": "2.2 Solving Quadratic Equations",
+        "slug": "_2-2-solving-quadratic-equations",
+        "link": "#_2-2-solving-quadratic-equations",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.3 Trigonometry",
+        "slug": "_2-3-trigonometry",
+        "link": "#_2-3-trigonometry",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.3.1 Angles",
+            "slug": "_2-3-1-angles",
+            "link": "#_2-3-1-angles",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.3.2 Trigonometric Functions",
+            "slug": "_2-3-2-trigonometric-functions",
+            "link": "#_2-3-2-trigonometric-functions",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.3.3 Useful Identities",
+            "slug": "_2-3-3-useful-identities",
+            "link": "#_2-3-3-useful-identities",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.4 Vectors",
+        "slug": "_2-4-vectors",
+        "link": "#_2-4-vectors",
+        "children": []
       }
     ],
     "path": "/notes_en/02_Miscellaneous_Math.html",
@@ -658,7 +701,15 @@ export const searchIndex = [
         "title": "4.4 Ray-Object Intersection",
         "slug": "_4-4-ray-object-intersection",
         "link": "#_4-4-ray-object-intersection",
-        "children": []
+        "children": [
+          {
+            "level": 3,
+            "title": "4.4.1 Ray-Sphere Intersection",
+            "slug": "_4-4-1-ray-sphere-intersection",
+            "link": "#_4-4-1-ray-sphere-intersection",
+            "children": []
+          }
+        ]
       },
       {
         "level": 2,
